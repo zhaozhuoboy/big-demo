@@ -1,2 +1,11 @@
-# big-demo
-React学习 大案例
+# 弹出侧边栏案例
+
+### 1 安装项目依赖包
+```
+npm install
+```
+### 2 编译代码
+
+```
+npm run build
+```
