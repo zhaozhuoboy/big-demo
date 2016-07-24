@@ -1,18 +1,10 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-
-import Button from './components/Button.js';
-import './stylesheet/common.css';
-
-class App extends Component {
-  render(){
-    return(
-      <div>
-        <Button />
-      </div>
-    )
-  }
-}
+import App from './App.js';
+import './css/common.css';
 
 
-ReactDOM.render(<App />,document.getElementById('app'));
+
+
+
+ReactDOM.render(<App />,document.getElementById('root'));

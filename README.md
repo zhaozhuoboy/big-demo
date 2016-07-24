@@ -1,11 +1,6 @@
-# 弹出侧边栏案例
+## TASK010: webpack hot reload
 
-### 1 安装项目依赖包
-```
-npm install
-```
-### 2 编译代码
 
-```
-npm run build
-```
+#### 项目运行步骤
+
+ npm start
