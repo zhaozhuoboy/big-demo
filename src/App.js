@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import Header from './components/Header';
-import List from './components/List';
+import NoteList from './components/NoteList';
 import Footer from './components/Footer';
 
 class App extends React.Component {
@@ -8,7 +8,9 @@ class App extends React.Component {
     return(
       <div>
         <Header />
-        <List />
+
+          <NoteList />
+
         <Footer />
       </div>
     )

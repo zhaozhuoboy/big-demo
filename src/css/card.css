@@ -1,0 +1,36 @@
+.card-wrap{
+  width:60%;
+  margin:20px auto;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.card-wrap:hover{
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+}
+.card-wrap .left{
+  float: left;
+  width: 15%;
+  height:100px;
+  background:#40E0D0;
+  font-size: 30px;
+  line-height: 100px;
+  text-align: center;
+  color:#fff;
+}
+.card-wrap .right{
+  float: left;
+  width: 85%;
+  height: 100px;
+  background: #fff;
+}
+.card-wrap .right h3{
+  color:#727272;
+  font-size: 24px;
+  padding:12px 20px;
+}
+.card-wrap .right p{
+  color:#737373;
+  font-size: 14px;
+  padding:4px 20px;
+
+}

@@ -1,6 +1,12 @@
-## TASK010: webpack hot reload
+## Big-Demo   小型的个人主页
 
 
-#### 项目运行步骤
-
- npm start
+#### 项目跑起来！
+  - 先安装项目的依赖包
+  ```
+  npm install
+  ```
+  - 启动服务器
+  ```
+  npm start
+  ```
