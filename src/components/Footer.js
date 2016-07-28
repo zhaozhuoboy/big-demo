@@ -17,16 +17,13 @@ class Footer extends React.Component {
         margin:"0 auto"
       },
       img:{
-        width:"150px",
-        height:"150px",
-        float:"left",
-        marginLeft:"300px"
+        width:"120px",
+        height:"120px",
       },
       footer_title:{
-        float:"left",
+
         fontSize:"26px",
-        marginTop:"50px",
-        marginLeft:"100px"
+
       }
 
     }

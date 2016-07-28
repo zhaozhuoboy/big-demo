@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
 import Header from './components/Header';
-import NoteList from './components/NoteList';
 import Footer from './components/Footer';
+import NoteList from './components/NoteList';
+import Home from './components/Home';
 
 class App extends React.Component {
   render () {
@@ -9,7 +10,7 @@ class App extends React.Component {
       <div>
         <Header />
 
-          <NoteList />
+          <Home />
 
         <Footer />
       </div>
