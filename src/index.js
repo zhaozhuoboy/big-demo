@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js';
+import { Router, browserHistory } from 'react-router';
+import routers from './routers';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -15,7 +17,7 @@ class MyApp extends Component{
   }
   render(){
     return(
-      <App />
+       <Router history={browserHistory}>{routers}</Router>
     )
   }
 }

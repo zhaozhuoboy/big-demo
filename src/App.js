@@ -3,14 +3,15 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import NoteList from './components/NoteList';
 import Home from './components/Home';
+import AboutMe from './components/AboutMe';
 
 class App extends React.Component {
   render () {
     return(
       <div>
         <Header />
-
-          <Home />
+        <AboutMe />
+        {this.props.children}
 
         <Footer />
       </div>
