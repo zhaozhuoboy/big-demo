@@ -1,0 +1,32 @@
+.user-info{
+  width:60%;
+  margin:50px auto;
+  text-align: center;
+}
+.user-info img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin:30px;
+  border:none;
+}
+.user-info ul{
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.user-info ul li{
+
+}
+.user-info ul li p{
+  font-size: 30px;
+  color:#436EEE;
+  font-weight: 700;
+}
+.user-info ul li b{
+  font-weight: 200;
+  font-size: 14px;
+  color:#727272;
+}

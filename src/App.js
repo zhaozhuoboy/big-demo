@@ -23,7 +23,8 @@ class App extends React.Component {
       <div>
         <Header change={this.cardSearch.bind(this)}/>
         {/*<NoteList search={this.state.search}/>*/}
-        <Skill />
+        {/*<Skill />*/}
+        <AboutMe />
 
         <Footer />
       </div>
