@@ -33,7 +33,7 @@ class Skill extends React.Component {
                 {value:234, name:'JavaScript'},
                 {value:135, name:'PhotoShop'},
                 {value:135, name:'JQuery'},
-                {value:60, name:'React'}
+                {value:160, name:'React'}
             ],
             itemStyle: {
                 emphasis: {
