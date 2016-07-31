@@ -6,12 +6,22 @@ import Home from './components/Home';
 import AboutMe from './components/AboutMe';
 
 class App extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      search:""
+    }
+  }
+  cardSearch(inputTxt){
+    this.setState({
+      search:inputTxt
+    })
+  }
   render () {
     return(
       <div>
-        <Header />
-        <AboutMe />
-        {this.props.children}
+        <Header change={this.cardSearch.bind(this)}/>
+        <NoteList search={this.state.search}/>
 
         <Footer />
       </div>

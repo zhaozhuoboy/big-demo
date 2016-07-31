@@ -14,9 +14,15 @@ class Header extends Component{
   constructor(props) {
       super(props);
       this.state = {open: false}
-    }
+  }
   handleToggle(){
     this.setState({open: !this.state.open})
+  }
+  handleInput(event){
+    let inputTxt = event.target.value;
+    // console.log(inputTxt);
+    // console.log(this.props.change);
+    this.props.change(inputTxt);
   }
 
   render(){
@@ -91,6 +97,7 @@ class Header extends Component{
                      inputStyle={styles.inputStyle}
                      underlineFocusStyle={styles.underlineFocusStyle}
                      underlineStyle={styles.underlineStyle}
+                     onChange={this.handleInput.bind(this)}
                      />
            <FontIcon className="material-icons" style={styles.search}>search</FontIcon>
            <IconButton tooltip="Menu" style={styles.icon} iconStyle={styles.svg} onClick={this.handleToggle.bind(this)}>
@@ -102,10 +109,10 @@ class Header extends Component{
               onRequestChange={(open) => this.setState({open})}
               docked={false} >
                 <h1 style={{textAlign:"center",backgroundColor:"rgb(0, 205, 205)",fontSize:"24px",color:"#fff"}}>我的个人主页</h1>
-                <MenuItem onTouchTap={this.handleToggle.bind(this)}><Link to="/">首页</Link></MenuItem>
-                <MenuItem onTouchTap={this.handleToggle.bind(this)}><Link to="/jishu">技术</Link></MenuItem>
-                <MenuItem onTouchTap={this.handleToggle.bind(this)}><Link to="/notelist">笔记列表</Link></MenuItem>
-                <MenuItem onTouchTap={this.handleToggle.bind(this)}><Link to="/about">关于我</Link></MenuItem>
+                <MenuItem onTouchTap={this.handleToggle.bind(this)}>首页</MenuItem>
+                <MenuItem onTouchTap={this.handleToggle.bind(this)}>技术</MenuItem>
+                <MenuItem onTouchTap={this.handleToggle.bind(this)}>笔记列表</MenuItem>
+                <MenuItem onTouchTap={this.handleToggle.bind(this)}>关于我</MenuItem>
             </Drawer>
          </div>
       </header>

@@ -11,7 +11,7 @@ class NoteList extends React.Component {
     }
     return(
       <section style={styles.main}>
-          <CardList />
+          <CardList pipei={this.props.search}/>
       </section>
     )
   }
