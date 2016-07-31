@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import NoteList from './components/NoteList';
 import Home from './components/Home';
 import AboutMe from './components/AboutMe';
+import Skill from './components/Skill';
 
 class App extends React.Component {
   constructor(){
@@ -21,7 +22,8 @@ class App extends React.Component {
     return(
       <div>
         <Header change={this.cardSearch.bind(this)}/>
-        <NoteList search={this.state.search}/>
+        {/*<NoteList search={this.state.search}/>*/}
+        <Skill />
 
         <Footer />
       </div>
