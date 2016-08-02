@@ -22,8 +22,9 @@ class App extends React.Component {
     return(
       <div>
         <Header change={this.cardSearch.bind(this)}/>
-        {/*<NoteList search={this.state.search}/>*/}
-        {/*<Skill />*/}
+        <Home />
+        <NoteList search={this.state.search}/>
+        <Skill />
         <AboutMe />
 
         <Footer />
