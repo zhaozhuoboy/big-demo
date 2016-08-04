@@ -11,7 +11,7 @@ class UserInfo extends React.Component {
           <p className="info"><span>{userInfo.login}</span></p>
           <p className="info">{userInfo.location}</p>
           <p className="info">{userInfo.email}</p>
-          <p><a href="http://www.zhaozhuo.club" target="_blank">{userInfo.blog}</a></p>
+          <p className="mypage"><a href="http://www.zhaozhuo.club" target="_blank">{userInfo.blog}</a></p>
         </div>
         <div className="clearfix"></div>
         <ul>

@@ -11,17 +11,24 @@
   border:none;
   display: block;
   float: left;
-  margin-left: 160px;
+  margin-left: 100px;
 
 }
 .user-info .userinfo{
   float: left;
-  padding-top: 40px;
+  margin-top: 30px;
+  padding:10px 40px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 20px;
 }
 .user-info .userinfo p{
   color:#727272;
   padding:4px 0;
   text-align: left;
+}
+.user-info .userinfo .mypage a{
+  text-decoration: none;
+  color:red;
 }
 .user-info ul{
   margin-top: 30px;
