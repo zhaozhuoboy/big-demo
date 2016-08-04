@@ -7,6 +7,7 @@ import IconButton from 'material-ui/IconButton';
 import MenuButton from 'material-ui/svg-icons/navigation/menu';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import { Link } from 'react-router';
 
 
 
@@ -83,6 +84,12 @@ class Header extends Component{
      svg: {
        width: '32px',
        height: '32px',
+     },
+     link:{
+       display:"block",
+       textAlign:"center",
+       color:"#424242",
+       textDecoration:"none"
      }
 
     }
@@ -109,10 +116,10 @@ class Header extends Component{
               onRequestChange={(open) => this.setState({open})}
               docked={false} >
                 <h1 style={{textAlign:"center",backgroundColor:"rgb(0, 205, 205)",fontSize:"24px",color:"#fff"}}>我的个人主页</h1>
-                <MenuItem onTouchTap={this.handleToggle.bind(this)}>首页</MenuItem>
-                <MenuItem onTouchTap={this.handleToggle.bind(this)}>技术</MenuItem>
-                <MenuItem onTouchTap={this.handleToggle.bind(this)}>笔记列表</MenuItem>
-                <MenuItem onTouchTap={this.handleToggle.bind(this)}>关于我</MenuItem>
+                <MenuItem onTouchTap={this.handleToggle.bind(this)}><Link to="/" style={styles.link}>首页</Link></MenuItem>
+                <MenuItem onTouchTap={this.handleToggle.bind(this)}><Link to="/skill" style={styles.link}>技术</Link></MenuItem>
+                <MenuItem onTouchTap={this.handleToggle.bind(this)}><Link to="/notelist" style={styles.link}>笔记列表</Link></MenuItem>
+                <MenuItem onTouchTap={this.handleToggle.bind(this)}><Link to="/about" style={styles.link}>关于</Link></MenuItem>
             </Drawer>
          </div>
       </header>

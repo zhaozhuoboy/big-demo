@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import NoteList from './components/NoteList';
@@ -7,6 +8,9 @@ import AboutMe from './components/AboutMe';
 import Skill from './components/Skill';
 
 class App extends React.Component {
+  getChildContext() {
+    return {muiTheme: getMuiTheme()};
+  }
   constructor(){
     super();
     this.state={
@@ -25,13 +29,17 @@ class App extends React.Component {
 
     {/* <Home />
         <NoteList search={this.state.search}/>
-        <Skill />*/}
+        <Skill />
         <AboutMe />
+        */}
+          {this.props.children}
 
         <Footer />
       </div>
     )
   }
 }
-
+App.childContextTypes = {
+  muiTheme: React.PropTypes.object.isRequired,
+};
 export default App;
