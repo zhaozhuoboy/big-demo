@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import './nav.css';
+import { Link } from 'react-router';
 
 class Nav extends React.Component {
   render () {
@@ -7,10 +8,10 @@ class Nav extends React.Component {
       <nav style={this.props.style}>
 
         <ul>
-          <li><a href="#">首页</a></li>
-          <li><a href="#">技能</a></li>
-          <li><a href="#">笔记列表</a></li>
-          <li><a href="#">关于我</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/skill">Skill</Link></li>
+          <li><Link to="/notelist">Blog</Link></li>
+          <li><Link to="/about">About</Link></li>
 
         </ul>
       </nav>
