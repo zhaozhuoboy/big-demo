@@ -26,12 +26,6 @@ class App extends React.Component {
     return(
       <div>
         <Header />
-
-    {/* <Home />
-        <NoteList search={this.state.search}/>
-        <Skill />
-        <AboutMe />
-        */}
           {this.props.children}
 
         <Footer />
