@@ -25,7 +25,7 @@ class App extends React.Component {
   render () {
     return(
       <div>
-        <Header change={this.cardSearch.bind(this)}/>
+        <Header />
 
     {/* <Home />
         <NoteList search={this.state.search}/>

@@ -10,12 +10,7 @@ class Header extends Component{
   handleToggle(){
     this.setState({open: !this.state.open})
   }
-  handleInput(event){
-    let inputTxt = event.target.value;
-    // console.log(inputTxt);
-    // console.log(this.props.change);
-    this.props.change(inputTxt);
-  }
+
 
   render(){
     let styles={
