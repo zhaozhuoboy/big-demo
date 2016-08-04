@@ -1,5 +1,5 @@
 .user-info{
-  width:60%;
+  width:80%;
   margin:50px auto;
   text-align: center;
 }
@@ -11,7 +11,7 @@
   border:none;
   display: block;
   float: left;
-  margin-left: 100px;
+  margin-left: 25%;
 
 }
 .user-info .userinfo{

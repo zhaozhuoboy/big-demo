@@ -1,0 +1,38 @@
+.repos-list{
+  list-style: none;
+  width:70%;
+  height:500px;
+  overflow: auto;
+  margin:0 auto;
+}
+.repos-list li{
+  width: 90%;
+  margin: 0 auto;
+  padding:20px 10px;
+  border-top: 1px solid #ccc;
+}
+.repos-list li:last-child{
+  border-bottom: 1px solid #ccc;
+}
+.repos-list li div{
+  display: flex;
+  justify-content: space-between;
+}
+.repos-list li div .name a{
+  text-decoration:none;
+  color:#40E0D0;
+  font-size: 22px;
+  transition:all 0.3s;
+}
+.repos-list li div .name a:hover{
+  color:#FFC125;
+}
+.repos-list li div .lang{
+  font-size: 14px;
+  color:#666666
+}
+.repos-list li .desc{
+  font-size: 14px;
+  color:#727272;
+  margin-top: 20px;
+}
