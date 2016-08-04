@@ -9,6 +9,19 @@
   border-radius: 50%;
   margin:30px;
   border:none;
+  display: block;
+  float: left;
+  margin-left: 160px;
+
+}
+.user-info .userinfo{
+  float: left;
+  padding-top: 40px;
+}
+.user-info .userinfo p{
+  color:#727272;
+  padding:4px 0;
+  text-align: left;
 }
 .user-info ul{
   margin-top: 30px;

@@ -7,6 +7,13 @@ class UserInfo extends React.Component {
     return(
       <div className="user-info">
         <img src={userInfo.avatar_url}/>
+        <div className="userinfo">
+          <p className="info"><span>{userInfo.login}</span></p>
+          <p className="info">{userInfo.location}</p>
+          <p className="info">{userInfo.email}</p>
+          <p><a href="http://www.zhaozhuo.club" target="_blank">{userInfo.blog}</a></p>
+        </div>
+        <div className="clearfix"></div>
         <ul>
           <li>
             <p>{userInfo.followers}</p>
