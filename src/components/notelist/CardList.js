@@ -55,7 +55,8 @@ class CardList extends React.Component {
         {this.state.wait ? <div>
                             <CircularProgress style={{left:"46%",marginTop:"50px"}}/>
                             <p style={{textAlign:"center",marginTop:"20px"}}>正在读取博客列表...</p>
-                           </div> :cardlist}
+                           </div> :
+                           cardlist}
       </div>
 
     )
