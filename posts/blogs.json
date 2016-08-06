@@ -23,5 +23,15 @@
     "index":5,
     "title":"webpack配置",
     "date":"2016年7月23日"
+  },
+  {
+    "index":6,
+    "title":"好好学习",
+    "date":"2016年7月23日"
+  },
+  {
+    "index":7,
+    "title":"babel",
+    "date":"2016年7月23日"
   }
 ]
