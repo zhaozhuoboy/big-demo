@@ -16,7 +16,7 @@ class CardList extends React.Component {
     }
   }
   componentDidMount(){
-    let address = `https://raw.githubusercontent.com/zhaozhuoboy/big-demo/master/posts/index.json?v=${Math.random()}`
+    let address = `https://raw.githubusercontent.com/zhaozhuoboy/big-demo/master/posts/blogs.json?v=${Math.random()}`
     console.log(address);
     axios.get(address).then((res) => {
       console.log(res);
