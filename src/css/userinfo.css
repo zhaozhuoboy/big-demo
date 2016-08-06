@@ -50,3 +50,24 @@
   font-size: 14px;
   color:#727272;
 }
+@media screen and (max-width:600px) {
+  .user-info img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin:30px;
+    border:none;
+    display: block;
+    margin-left: 25%;
+  }
+  .user-info .userinfo{
+    float: none;
+    margin:0 auto;
+    padding:10px 40px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 20px;
+  }
+  .user-info .userinfo p{
+    text-align: center;
+  }
+}

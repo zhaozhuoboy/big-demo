@@ -55,14 +55,14 @@ class AboutMe extends React.Component {
 
     }
     return(
-      <Card style={{width:"80%",minHeight:"500px",margin:"0 auto",padding:"40px 0"}}>
+      <Card style={{width:"90%",minHeight:"500px",margin:"100px auto",padding:"40px 0",}}>
 
-
-      {this.state.wait ? <div>
-                          <CircularProgress style={{left:"46%",marginTop:"160px"}}/>
-                          <p style={{textAlign:"center",marginTop:"20px"}}>正在从GitHub获取信息...</p>
-                         </div>: GitHubInfo}
-      {/*再写一个自我简介*/}
+        <h1 style={{textAlign:"center",color:"#00E5EE",fontSize:"50px"}}>关于我</h1>
+        {this.state.wait ? <div>
+                            <CircularProgress style={{left:"46%",marginTop:"160px"}}/>
+                            <p style={{textAlign:"center",marginTop:"20px"}}>正在从GitHub获取信息...</p>
+                           </div>: GitHubInfo}
+        {/*再写一个自我简介*/}
 
       </Card>
     )
