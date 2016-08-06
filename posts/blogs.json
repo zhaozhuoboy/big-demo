@@ -18,5 +18,10 @@
     "index":5,
     "title":"react",
     "date":"2016年7月29日"
+  },
+  {
+    "index":6,
+    "title":"webpack配置",
+    "date":"2016年7月23日"
   }
 ]
