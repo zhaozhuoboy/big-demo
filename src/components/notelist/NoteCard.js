@@ -19,7 +19,7 @@ NoteCard.defaultProps={
   date:"这是日期"
 }
 NoteCard.propTypes={
-  index:React.PropTypes.string.isRequired,
+  index:React.PropTypes.number.isRequired,
   title:React.PropTypes.string.isRequired,
   date:React.PropTypes.string.isRequired
 }
