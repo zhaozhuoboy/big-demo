@@ -9,13 +9,7 @@ import axios from 'axios';
 
 
 
-// for(let i = listData.length-1 ; i >= 0 ;i--){
-//   cardlist.push(<NoteCard index={ listData[i].index }
-//                           title={ listData[i].title }
-//                           date={ listData[i].date }
-//                           key={i}
-//      />);
-//   }
+
 class CardList extends React.Component {
   constructor(){
     super();
@@ -24,7 +18,7 @@ class CardList extends React.Component {
     }
   }
   componentDidMount(){
-    let address = `https://raw.githubusercontent.com/zhaozhuoboy/big-demo/master/posts/blogs.json`
+    let address = `https://raw.githubusercontent.com/zhaozhuoboy/big-demo/master/posts/blogs.json?v=${Math.random}`
     axios.get(address).then((res) => {
       console.log(res);
       this.setState({
@@ -33,30 +27,23 @@ class CardList extends React.Component {
     });
   }
   render () {
-    var blogCards = [];
-    map((b) =>  {
-                  blogCards.push(
-                    <NoteCard title={b.title} date={b.created_at } index={b.id} key={Math.random()}/>
-                  );
-                },
-        this.state.posts
-    );
 
 
-    // console.log(this.state.posts.length);
-    // let cardlist =[];
+
+
+     let cardlist =[];
     // if(this.props.pipei == ""){
     //   console.log('weikong');
-      // map((a) => {
-      //               cardlist.push(
-      //                 <NoteCard index={a.index}
-      //                           title={a.title}
-      //                           date={a.date}
-      //                           key={Math.random()}
-      //                   />
-      //               );
-      //           },
-      //           this.state.posts );
+      map((a) => {
+                    cardlist.push(
+                      <NoteCard index={a.index}
+                                title={a.title}
+                                date={a.date}
+                                key={Math.random()}
+                        />
+                    );
+                },
+                this.state.posts );
     // }else{
     //   let query=new RegExp(this.props.pipei,"i");
     //   for (var i = 0; i < this.state.posts.length; i++) {
@@ -70,7 +57,7 @@ class CardList extends React.Component {
     return(
       <div>
 
-        {blogCards}
+        {cardlist}
       </div>
 
     )
