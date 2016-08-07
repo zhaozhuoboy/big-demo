@@ -40,10 +40,10 @@ class CardList extends React.Component {
                 },
                 this.state.posts );
     }else{
-      let query=new RegExp(this.props.pipei,"i");
-      for (var i = 0; i < this.state.posts.length; i++) {
 
-        if (query.test(this.state.posts[i].title)||query.test(this.state.posts[i].index)) {
+      for (var i = 0; i < this.state.posts.length; i++) {
+        let posts = this.state.posts[i];
+        if (posts.title.indexOf(this.props.pipei)!= -1 || posts.index == this.props.pipei) {
           cardlist.push(<NoteCard title={this.state.posts[i].title} date={this.state.posts[i].date} index={this.state.posts[i].index} key={Math.random()}/>)
         }
       }
