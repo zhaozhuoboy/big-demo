@@ -16,7 +16,7 @@ class Posts extends React.Component {
   }
   componentDidMount(){
     //https://raw.githubusercontent.com/zhaozhuoboy/big-demo/master/posts/react%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF.md
-    let address = `https://raw.githubusercontent.com/zhaozhuoboy/big-demo/master/posts/react%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF.md`;
+    let address = `https://raw.githubusercontent.com/zhaozhuoboy/big-demo/master/posts/react%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF.md?v=${Math.random()}`;
     axios.get(address)
          .then((res) => {
            console.log(res);
