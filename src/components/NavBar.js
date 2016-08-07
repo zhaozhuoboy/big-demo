@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router';
@@ -22,11 +22,15 @@ class NavBar extends React.Component {
   }
   setNavBarState(){
     this.setState({
-      btnColor:this.context.router.isActive('/',true) ? true : false,
+      btnColor:this.context.router.isActive('/',true) ? true :
+                this.context.router.isActive('/skill') ? false:
+                this.context.router.isActive('/notelist') ? false:
+                this.context.router.isActive('/about') ? false:true,
+
       title:this.context.router.isActive('/',true) ? "首页":
             this.context.router.isActive('/skill') ? "技能":
             this.context.router.isActive('/notelist') ? "博客":
-            this.context.router.isActive('/about') ? "关于":"首页"
+            this.context.router.isActive('/about') ? "关于":"笔记"
     })
   }
   handleToggle(){this.setState({open: !this.state.open})};
@@ -58,7 +62,7 @@ class NavBar extends React.Component {
         color:'#fff',
         lineHeight:'75px',
         fontSize:'20px',
-        backgroundColor:'#00BCD4',
+        backgroundColor:'#333',
         marginBottom:'10px'
       }
     }
@@ -68,7 +72,7 @@ class NavBar extends React.Component {
           onClick={this.handleToggle.bind(this)}
           iconStyle={styles.smallIcon}
           style={styles.small}>
-          {this.state.btnColor ? <Menu color='#fff'/> : <Menu color='#00BCD4'/>}
+          {this.state.btnColor ? <Menu color='#fff'/> : <Menu color='#333'/>}
         </IconButton>
         <Drawer
           docked={false}

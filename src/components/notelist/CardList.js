@@ -25,16 +25,25 @@ class CardList extends React.Component {
 
     let cardlist =[];
     if(this.props.pipei == ""){
-      map((a) => {
-                    cardlist.push(
-                      <NoteCard index={a.index}
-                                title={a.title}
-                                date={a.date}
-                                key={Math.random()}
-                        />
-                    );
-                },
-                this.state.posts );
+      // map((a) => {
+      //               cardlist.push(
+      //                 <NoteCard index={a.index}
+      //                           title={a.title}
+      //                           date={a.date}
+      //                           key={Math.random()}
+      //                   />
+      //               );
+      //           },
+      //           this.state.posts );
+    //笔记卡片倒序显示
+    for(let i = this.state.posts.length -1 ; i >=0 ; i--){
+      cardlist.push(
+        <NoteCard index={this.state.posts[i].index}
+                  title={this.state.posts[i].title}
+                  date={this.state.posts[i].date}
+                  key={Math.random()}
+          />)
+    }
     }else{
 
       for (var i = 0; i < this.state.posts.length; i++) {
@@ -48,7 +57,7 @@ class CardList extends React.Component {
     return(
       <div>
         {this.state.wait ? <div>
-                            <CircularProgress style={{left:"46%",marginTop:"50px"}}/>
+                            <CircularProgress style={{left:"50%",marginTop:"50px",marginLeft:"-30px"}}/>
                             <p style={{textAlign:"center",marginTop:"20px"}}>正在读取博客列表...</p>
                            </div> :
                            cardlist}

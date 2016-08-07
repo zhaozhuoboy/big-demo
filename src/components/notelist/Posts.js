@@ -1,10 +1,15 @@
 import React, { PropTypes } from 'react';
+import IconButton from 'material-ui/IconButton';
+import GoBack from 'material-ui/svg-icons/navigation/arrow-back';
 import axios from 'axios';
 import CircularProgress from 'material-ui/CircularProgress';
 import marked from 'marked';
 import hljs from 'highlight.js';
+import {hashHistory} from 'react-router';
 import '../../css/posts.css';
-import '../../css/highlight.css'
+import '../../css/highlight.css';
+
+
 
 class Posts extends React.Component {
   constructor(){
@@ -13,6 +18,9 @@ class Posts extends React.Component {
       content:"",
       wait :true
     }
+  }
+  goBack(){
+    hashHistory.goBack();
   }
   componentDidMount(){
     let mdName = this.props.params.title; //拿到地址栏上的路径  路径对应markdown文件名
@@ -40,20 +48,37 @@ class Posts extends React.Component {
         lineHeight:"70px",
         fontSize:"30px",
         color:"#fff",
-        backgroundColor:"#00CED1"
+        backgroundColor:"#333"
       },
       card:{
         width:"80%",
         margin:"0 auto",
         minHeight:"500px",
         boxShadow:"0px 3px 8px rgba(0,0,0,0.3)"
+      },
+      goback:{
+        position:"absolute",
+        top:"0",
+        right:"10px",
+        width: 72,
+        height: 72,
+        padding: 16,
+      },
+      iconSize:{
+        width: 36,
+        height: 36,
       }
     }
-    console.log(this.props.params);
     return(
       <div>
 
       <div style={styles.noteHeader}>欢迎阅读</div>
+      <IconButton onClick={this.goBack.bind(this)}
+                  tooltip	="返回博客列表"
+                  style={styles.goback}
+                  iconStyle={styles.iconSize}>
+        <GoBack color="#fff"/>
+      </IconButton>
         <div style={styles.card}>
           {this.state.wait ? <div>
                               <CircularProgress style={{left:"46%",marginTop:"160px"}}/>

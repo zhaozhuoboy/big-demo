@@ -34,6 +34,8 @@ class NoteList extends React.Component {
           <TextField fullWidth={true}
                      style={styles.textfield}
                      floatingLabelText="Search Blog"
+                     underlineFocusStyle={{borderColor:"#666"}}
+                     floatingLabelFocusStyle={{color:"#333"}}
                      onChange={this.handleInput.bind(this)}
                       />
         </div>

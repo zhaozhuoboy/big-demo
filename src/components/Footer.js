@@ -22,7 +22,7 @@ class Footer extends React.Component {
       },
       footer_title:{
         fontSize:"20px",
-        marginTop:"30px"
+        marginTop:"20px"
       }
 
     }

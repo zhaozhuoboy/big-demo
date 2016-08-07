@@ -6,6 +6,7 @@ class Home extends React.Component {
     let styles={
       h1:{
         backgroundColor:"rgba(0,0,0,0.5)",
+        marginTop:"40vh",
         paddingTop:"20px"
       },
       p:{
@@ -13,15 +14,24 @@ class Home extends React.Component {
         fontWeight:"800",
         color:"#DC143C",
         padding:"20px 0",
-        backgroundColor:"rgba(0,0,0,0.5)"
+        backgroundColor:"rgba(0,0,0,0.5)",
+      },
+      h2:{
+        color:"#666",
+        textAlign:"center",
+        fontSize:"30px",
+        margin:"30px 0"
       }
     }
     return(
-      <div className="home-wrap">
-        <div className="inner">
-            <h1 style={styles.h1}>欢迎来到</h1>
-            <p style={styles.p}>ZHAOZHUO'BLOG</p>
+      <div>
+        <div className="home-wrap">
+          <div className="inner">
+              <h1 style={styles.h1}>欢迎来到</h1>
+              <p style={styles.p}>ZHAOZHUO'BLOG</p>
+          </div>
         </div>
+        <h2 style={styles.h2}>个人作品集</h2>
       </div>
     )
   }
