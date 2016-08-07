@@ -3,10 +3,24 @@ import '../css/home.css';
 
 class Home extends React.Component {
   render () {
+    let styles={
+      h1:{
+        backgroundColor:"rgba(0,0,0,0.5)",
+        paddingTop:"20px"
+      },
+      p:{
+        fontSize:"40px",
+        fontWeight:"800",
+        color:"#DC143C",
+        padding:"20px 0",
+        backgroundColor:"rgba(0,0,0,0.5)"
+      }
+    }
     return(
       <div className="home-wrap">
         <div className="inner">
-            <h1>Welcome</h1>
+            <h1 style={styles.h1}>欢迎来到</h1>
+            <p style={styles.p}>ZHAOZHUO'BLOG</p>
         </div>
       </div>
     )

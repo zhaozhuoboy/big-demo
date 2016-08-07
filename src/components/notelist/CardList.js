@@ -4,9 +4,6 @@ import map from 'lodash/fp/map';
 import axios from 'axios';
 import CircularProgress from 'material-ui/CircularProgress';
 
-
-//https://raw.githubusercontent.com/zhaozhuoboy/big-demo/master/posts/blogs.json
-
 class CardList extends React.Component {
   constructor(){
     super();
@@ -18,7 +15,6 @@ class CardList extends React.Component {
   componentDidMount(){
     let address = `https://raw.githubusercontent.com/zhaozhuoboy/note/master/index.json?v=${Math.random()}`
     axios.get(address).then((res) => {
-      console.log(res.data);
       this.setState({
         posts: res.data,
         wait:false

@@ -10,7 +10,24 @@ class NavBar extends React.Component {
     super(props);
     this.state = {
       open: false,
+      btnColor:false,
+      title:"首页"
     }
+  }
+  componentWillMount(){
+    this.setNavBarState();
+  }
+  componentWillReceiveProps(nextProps){
+    this.setNavBarState();
+  }
+  setNavBarState(){
+    this.setState({
+      btnColor:this.context.router.isActive('/',true) ? true : false,
+      title:this.context.router.isActive('/',true) ? "首页":
+            this.context.router.isActive('/skill') ? "技能":
+            this.context.router.isActive('/notelist') ? "博客":
+            this.context.router.isActive('/about') ? "关于":"首页"
+    })
   }
   handleToggle(){this.setState({open: !this.state.open})};
   handleClose(){this.setState({open: false})};
@@ -78,5 +95,7 @@ class NavBar extends React.Component {
     )
   }
 }
-
+NavBar.contextTypes={
+  router:React.PropTypes.object.isRequired,
+}
 export default NavBar;

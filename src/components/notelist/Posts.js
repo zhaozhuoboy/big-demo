@@ -19,7 +19,6 @@ class Posts extends React.Component {
     let address = `https://raw.githubusercontent.com/zhaozhuoboy/note/master/notes/${mdName}.md?v=${Math.random()}`;
     axios.get(address)
          .then((res) => {
-           console.log(res);
            this.setState({
              content:res.data,
              wait:false

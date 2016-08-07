@@ -1,10 +1,9 @@
 import React, { PropTypes } from 'react';
 import '../../css/card.css';
-import {hashHistory} from 'react-router';
+import {hashHistory} from 'react-router';//用上下文的router  就不用引用这个了
 class NoteCard extends React.Component {
   hindleClickCard(){
-    console.log(hashHistory);
-    let url = hashHistory.push(`notelist/${this.props.title}`)
+    this.context.router.push(`notelist/${this.props.title}`)
   }
   render () {
       return(
@@ -27,5 +26,8 @@ NoteCard.propTypes={
   index:React.PropTypes.number.isRequired,
   title:React.PropTypes.string.isRequired,
   date:React.PropTypes.string.isRequired
+}
+NoteCard.contextTypes={
+  router:React.PropTypes.object.isRequired,
 }
 export default NoteCard;
