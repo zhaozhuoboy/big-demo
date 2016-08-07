@@ -1,9 +1,14 @@
 import React, { PropTypes } from 'react';
 import '../../css/card.css';
+import {hashHistory} from 'react-router';
 class NoteCard extends React.Component {
+  hindleClickCard(){
+    console.log(hashHistory);
+    let url = hashHistory.push(`notelist/${this.props.title}`)
+  }
   render () {
       return(
-        <div className="card-wrap">
+        <div className="card-wrap" onClick={this.hindleClickCard.bind(this)}>
           <div className="left">{this.props.index}</div>
           <div className="right">
             <h3>{this.props.title}</h3>

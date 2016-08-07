@@ -1,14 +1,12 @@
 [
   {
     "index":1,
-    "name":"react",
     "title":"react学习之路",
     "date":"2016年7月13日"
   },
   {
     "index":2,
-    "name":"webpack+react",
-    "title":"webpack配置",
+    "title":"webpack配置", 
     "date":"2016年7月23日"
   }
 
