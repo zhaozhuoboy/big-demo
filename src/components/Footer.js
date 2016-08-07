@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import wechatImg from '../images/wechat.jpg';
 
 class Footer extends React.Component {
   render () {
@@ -7,7 +6,7 @@ class Footer extends React.Component {
       footer:{
         padding:"20px 0",
         width:"100%",
-        height:"150px",
+        height:"120px",
         textAlign:"center",
         backgroundColor:"#212121",
         color:"#fff",
@@ -16,22 +15,22 @@ class Footer extends React.Component {
         width:"90%",
         margin:"0 auto"
       },
-      img:{
-        width:"120px",
-        height:"120px",
+      h2:{
+        color:"#ddd",
+        fontSize:"30px",
+        padding:"10px 0"
       },
       footer_title:{
-
-        fontSize:"26px",
-
+        fontSize:"20px",
+        marginTop:"30px"
       }
 
     }
       return(
         <footer style={styles.footer}>
           <div style={styles.inner}>
-            <img src={wechatImg} style={styles.img}/>
-            <h2 style={styles.footer_title}>WeChat ：zhaozhuoboy</h2>
+            <h2 style={styles.h2}>成功永远属于马上行动的人</h2>
+            <p style={styles.footer_title}>欢迎加我的微信 ：zhaozhuoboy</p>
           </div>
         </footer>
       )

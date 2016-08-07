@@ -16,7 +16,7 @@ class CardList extends React.Component {
     }
   }
   componentDidMount(){
-    let address = `https://raw.githubusercontent.com/zhaozhuoboy/big-demo/master/posts/index.json?v=${Math.random()}`
+    let address = `https://raw.githubusercontent.com/zhaozhuoboy/note/master/index.json?v=${Math.random()}`
     axios.get(address).then((res) => {
       console.log(res.data);
       this.setState({
@@ -29,7 +29,6 @@ class CardList extends React.Component {
 
     let cardlist =[];
     if(this.props.pipei == ""){
-      console.log('weikong');
       map((a) => {
                     cardlist.push(
                       <NoteCard index={a.index}

@@ -15,9 +15,8 @@ class Posts extends React.Component {
     }
   }
   componentDidMount(){
-    let mdName = this.props.params.title;
-    //https://raw.githubusercontent.com/zhaozhuoboy/big-demo/master/posts/react%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF.md
-    let address = `https://raw.githubusercontent.com/zhaozhuoboy/big-demo/master/posts/${mdName}.md?v=${Math.random()}`;
+    let mdName = this.props.params.title; //拿到地址栏上的路径  路径对应markdown文件名
+    let address = `https://raw.githubusercontent.com/zhaozhuoboy/note/master/notes/${mdName}.md?v=${Math.random()}`;
     axios.get(address)
          .then((res) => {
            console.log(res);
@@ -63,7 +62,6 @@ class Posts extends React.Component {
                              </div>:""}
           <div className="posts-content">
             <span dangerouslySetInnerHTML={{__html: markdown}} />
-
           </div>
 
         </div>

@@ -17,7 +17,7 @@ class NoteList extends React.Component {
     let styles={
       main:{
         width:"100%",
-        minHeight:"400px"
+        minHeight:"420px"
       },
       search:{
         width:"60%",
