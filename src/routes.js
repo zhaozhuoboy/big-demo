@@ -4,6 +4,7 @@ import App from './App';
 import Home from './components/Home';
 import Skill from './components/Skill';
 import NoteList from './components/NoteList';
+import Posts from './components/notelist/Posts';
 import AboutMe from './components/AboutMe';
 
 export default (
@@ -11,6 +12,7 @@ export default (
     <Route path="/home" component ={Home}/>
     <Route path="/skill" component ={Skill}/>
     <Route path="/notelist" component ={NoteList}/>
+    <Route path="/notelist/:title" component ={Posts}/>//一篇博客笔记叫一个posts
     <Route path="/about" component ={AboutMe}/>
     <IndexRoute component={Home} />
   </Route>
