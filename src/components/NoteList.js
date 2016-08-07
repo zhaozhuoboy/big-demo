@@ -22,10 +22,10 @@ class NoteList extends React.Component {
       search:{
         width:"60%",
         height:"100px",
-        margin:"0 auto"
+        margin:"30px auto"
       },
       textfield:{
-        marginTop:"30px"
+        margin:"30px 0"
       }
     }
     return(
