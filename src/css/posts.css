@@ -56,6 +56,9 @@
   padding: 4px 10px;
   border-radius: 5px;
 }
+.posts-content p em{
+  color:#DC143C;
+}
 .posts-content blockquote {
   border-left: 5px solid #00bcd4;
   font-style: italic;
