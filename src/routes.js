@@ -6,7 +6,6 @@ import Skill from './components/Skill';
 import NoteList from './components/NoteList';
 import Posts from './components/notelist/Posts';
 import AboutMe from './components/AboutMe';
-import NotFindPage from './components/NotFindPage'
 
 export default (
   <Route path="/" component={App}>
@@ -15,7 +14,6 @@ export default (
     <Route path="/notelist" component ={NoteList}/>
     <Route path="/notelist/:title" component ={Posts}/>//一篇博客笔记叫一个posts
     <Route path="/about" component ={AboutMe}/>
-    <Route path="*" component={NotFindPage}/>
     <IndexRoute component={Home} />
   </Route>
 )

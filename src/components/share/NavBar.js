@@ -85,13 +85,13 @@ class NavBar extends React.Component {
               <Link to="/" style={styles.link} activeStyle={{color: '#E91E63'}} onlyActiveOnIndex={true}>首页</Link>
             </MenuItem>
             <MenuItem onTouchTap={this.handleClose.bind(this)}>
-              <Link to="skill" style={styles.link} activeStyle={{color: '#E91E63'}}>技能</Link>
+              <Link to="/skill" style={styles.link} activeStyle={{color: '#E91E63'}}>技能</Link>
             </MenuItem>
             <MenuItem onTouchTap={this.handleClose.bind(this)}>
-              <Link to="notelist" style={styles.link} activeStyle={{color: '#E91E63'}}>博客</Link>
+              <Link to="/notelist" style={styles.link} activeStyle={{color: '#E91E63'}}>博客</Link>
             </MenuItem>
             <MenuItem onTouchTap={this.handleClose.bind(this)}>
-              <Link to="about" style={styles.link} activeStyle={{color: '#E91E63'}}>关于</Link>
+              <Link to="/about" style={styles.link} activeStyle={{color: '#E91E63'}}>关于</Link>
             </MenuItem>
           </div>
         </Drawer>

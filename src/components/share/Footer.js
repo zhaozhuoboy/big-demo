@@ -17,12 +17,11 @@ class Footer extends React.Component {
       },
       h2:{
         color:"#ddd",
-        fontSize:"30px",
-        padding:"10px 0"
+        fontSize:"24px",
       },
       footer_title:{
-        fontSize:"20px",
-        marginTop:"20px"
+        fontSize:"16px",
+        marginTop:"10px"
       }
 
     }
