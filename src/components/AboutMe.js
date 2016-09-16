@@ -55,7 +55,7 @@ class AboutMe extends React.Component {
 
     }
     return(
-      <Card style={{width:"90%",minHeight:"500px",margin:"100px auto",padding:"40px 0",}}>
+      <Card style={{width:"96%",minHeight:"500px",margin:"100px auto",padding:"40px 0",}}>
 
         <h1 style={{textAlign:"center",color:"#666",fontSize:"50px"}}>关于我</h1>
         {this.state.wait ? <div>

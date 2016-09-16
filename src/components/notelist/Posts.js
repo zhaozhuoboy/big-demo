@@ -51,7 +51,7 @@ class Posts extends React.Component {
         backgroundColor:"#333"
       },
       card:{
-        width:"80%",
+        width:"90%",
         margin:"0 auto",
         minHeight:"500px",
         boxShadow:"0px 3px 8px rgba(0,0,0,0.3)"
@@ -79,7 +79,7 @@ class Posts extends React.Component {
                   iconStyle={styles.iconSize}>
         <GoBack color="#fff"/>
       </IconButton>
-        <div style={styles.card}>
+        <div style={styles.card} className="card">
           {this.state.wait ? <div>
                               <CircularProgress style={{left:"46%",marginTop:"160px"}}/>
                               <p style={{textAlign:"center",marginTop:"20px"}}>正在读取文章...</p>

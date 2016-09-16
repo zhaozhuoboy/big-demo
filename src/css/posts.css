@@ -91,3 +91,11 @@
   line-height: 2.3;
   text-align: center;
 }
+@media screen and (max-width:600px) {
+  .posts-content{
+    width: 96% !important;
+  }
+  .card{
+    width: 100% !important;
+  }
+}
